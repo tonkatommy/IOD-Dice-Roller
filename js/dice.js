@@ -7,6 +7,11 @@ function roll() {
 
 function printNumber(number) {
   var diceDiv = document.getElementById("dice");
+  if (number > 8) {
+    diceDiv.style.color = "red";
+  } else {
+    diceDiv.style.color = "blue";
+  }
   diceDiv.innerHTML = number;
 }
 
@@ -20,6 +25,14 @@ button.onclick = function () {
 function getNumber() {
   var sides = parseInt(document.getElementById("sides").value);
   var num = Math.floor(Math.random() * sides) + 1;
+
+  var count = 1;
+
+  while (count > 0) {
+    alert("You are awesome!");
+    count--;
+  }
+
   return num;
 }
 
